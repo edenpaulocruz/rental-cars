@@ -2,4 +2,7 @@
 
 <%= link_to 'Editar', edit_manufacturer_path(@manufacturer) %>
 
+<%= link_to 'Apagar fabricante', manufacturer_path(@manufacturer), method: :delete,
+  data: { confirm: 'Quer apagar este fabricante?' } %>
+
 <%= link_to 'Voltar', manufacturers_path %>
