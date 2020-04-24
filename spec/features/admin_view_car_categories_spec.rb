@@ -34,7 +34,7 @@ feature 'Admin view car categories and return to home page' do
 
     expect(page).to have_content('A')
     expect(page).to have_content(100)
-    expect(page).to have_content(50)
+    expect(page).to have_content(60)
     expect(page).to have_content(30)
     expect(page).not_to have_content('B')
     expect(page).not_to have_content(80)
