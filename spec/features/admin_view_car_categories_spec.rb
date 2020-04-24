@@ -24,16 +24,22 @@ feature 'Admin view car categories and return to home page' do
 
     visit root_path
     click_on 'Categorias de carros'
+
+    expect(page).to have_content('A')
+    expect(page).to have_content(100)
+    expect(page).to have_content('B')
+    expect(page).to have_content(80)
+    
     click_on 'A'
 
     expect(page).to have_content('A')
     expect(page).to have_content(100)
     expect(page).to have_content(50)
     expect(page).to have_content(30)
-    expect(page).to have_content('B')
-    expect(page).to have_content(80)
-    expect(page).to have_content(48)
-    expect(page).to have_content(24)
+    expect(page).not_to have_content('B')
+    expect(page).not_to have_content(80)
+    expect(page).not_to have_content(48)
+    expect(page).not_to have_content(24)
 
     click_on 'Voltar'
 
