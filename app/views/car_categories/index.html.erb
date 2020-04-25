@@ -17,4 +17,8 @@
   </tbody>
 </table>
 
+<% if @car_categories.empty? %>
+  <p>Nenhuma categoria de carros cadastrada</p>
+<% end %>
+
 <%= link_to 'Voltar', root_path %>

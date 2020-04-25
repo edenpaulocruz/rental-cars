@@ -6,13 +6,14 @@
       <th>Seguro do veículo</th>
       <th>Seguro de terceiros</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td><%= @car_category.daily_rate %></td>
       <td><%= @car_category.car_insurance %></td>
       <td><%= @car_category.third_part_insurance %></td>
     </tr>
-  </thead>
-  <tbody></tbody>
+  </tbody>
 </table>
 
 <%= link_to 'Voltar', car_categories_path %>

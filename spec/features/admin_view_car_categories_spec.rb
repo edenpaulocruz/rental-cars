@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-feature 'Admin view car categories and return to home page' do
-  scenario 'successfully' do
+feature 'Admin view car categories' do
+  scenario 'successfully, and return to home page' do
     CarCategory.create!(name: 'A', daily_rate: 100)
     CarCategory.create!(name: 'B', daily_rate: 80)
 
@@ -18,7 +18,7 @@ feature 'Admin view car categories and return to home page' do
     expect(current_path).to eq root_path
   end
 
-  scenario 'and view details, and return to car categories page' do
+  scenario 'view details, and return to car categories page' do
     CarCategory.create!(name: 'A', daily_rate: 100, car_insurance: 60, third_part_insurance: 30)
     CarCategory.create!(name: 'B', daily_rate: 80, car_insurance: 48, third_part_insurance: 24)
 
